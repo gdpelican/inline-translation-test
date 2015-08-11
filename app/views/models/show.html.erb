@@ -1,17 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<div id="model-<%= @model.id %>">
+<div id="model-<%= @model.id %>" class="model-content">
   <h1><%= @model.translate_me_title %></h1>
   <h3><%= translated_element_for @model, :translate_me_title %></h3>
 
   <div><%= @model.translate_me_body %></div>
   <div><%= translated_element_for @model, :translate_me_body %></div>
-
-  <div class="translate-options">
-    <div><%= translate_link_for @model, to: :fr, text: "Translate to French" %></div>
-    <div><%= translate_link_for @model, to: :de, text: "Translate to German" %></div>
-  </div>
 </div>
 
-<%= link_to 'Edit', edit_model_path(@model) %> |
-<%= link_to 'Back', models_path %>
+<div class="translate-options">
+  <div><%= translate_link_for @model, to: :fr, text: "Translate to French" %></div>
+  <div><%= translate_link_for @model, to: :de, text: "Translate to German" %></div>
+  <div><%= translate_link_for @model, to: :cs, text: "Translate to Czech" %></div>
+  <div><%= translate_link_for @model, to: :cy, text: "Translate to Welsh" %></div>
+  <div><%= translate_link_for @model, to: :th, text: "Translate to Thai" %></div>
+  <div><%= translate_link_for @model, to: :zh, text: "Translate to Chinese" %></div>
+</div>
+
+<div class="navigation-links clearfix">
+  <%= link_to 'Edit', edit_model_path(@model) %> |
+  <%= link_to 'Back', models_path %>
+</div>

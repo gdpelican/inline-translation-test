@@ -1,0 +1,27 @@
+.model-title {
+  label {
+    display: inline-block;
+    width: 50px;
+  }
+  input { padding: 5px; }
+  padding: 10px;
+}
+
+.model-body {
+  label {
+    display: inline-block;
+    width: 50px;
+    vertical-align: top;
+  }
+  input { padding: 5px; }
+  padding: 10px;
+}
+
+.model-content { float: left; }
+.translate-options { float: right; }
+.inline-translation-translated { font-style: italic; }
+
+.navigation-link {
+  padding-top: 20px;
+}
+.clearfix { clear: both; }
