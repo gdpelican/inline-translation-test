@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div id="model-<%= @model.id %>">
+  <h1><%= @model.translate_me_title %></h1>
+  <h3><%= translated_element_for @model, :translate_me_title %></h3>
+
+  <div><%= @model.translate_me_body %></div>
+  <div><%= translated_element_for @model, :translate_me_body %></div>
+
+  <div class="translate-options">
+    <div><%= translate_link_for @model, to: :fr, text: "Translate to French" %></div>
+    <div><%= translate_link_for @model, to: :de, text: "Translate to German" %></div>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_model_path(@model) %> |
+<%= link_to 'Back', models_path %>

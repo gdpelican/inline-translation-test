@@ -1,0 +1,20 @@
+<%= form_for(@model) do |f| %>
+  <% if @model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@model.errors.count, "error") %> prohibited this model from being saved:</h2>
+
+      <ul>
+      <% @model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  Title: <%= f.text_field :translate_me_title %>
+  Body:  <%= f.text_field :translate_me_body %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
